@@ -15,15 +15,15 @@ public:
     string mergeAlternately(string word1, string word2) {
         string merged = "";
         int i = 0, j = 0;
-        int len1 = word1.size(), len2 = word2.size();
+        int len1 = word1.size(), len2 = word2.size(); // Length of the strings
 
-        // Alternamos caracteres mientras ambas palabras tengan caracteres restantes
+        // Alternate characters while both words atill have remaining characters
         while (i < len1 && j < len2) {
-            merged += word1[i++];
-            merged += word2[j++];
+            merged += word1[i++]; // Add character from word1 and incremement i
+            merged += word2[j++]; // Add character from word1 and incremement j
         }
 
-        // Agregamos los caracteres restantes (si los hay)
+        // Append remaining characters (if any)
         merged += word1.substr(i);
         merged += word2.substr(j);
 
